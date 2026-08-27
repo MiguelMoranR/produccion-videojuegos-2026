@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bvh7k2nbjj6sa"]
+
+[ext_resource type="Script" uid="uid://ddsv58a2rd4uc" path="res://src/scenes/config/config_panel.gd" id="1_0mmty"]
+
+[node name="ConfigPanel" type="Node" unique_id=123985388]
+script = ExtResource("1_0mmty")
+
+[node name="Label" type="Label" parent="." unique_id=1456191967]
+offset_left = 356.0
+offset_top = 67.00001
+offset_right = 653.0
+offset_bottom = 90.00001
+scale = Vector2(1.1854856, 2.1337793)
+text = "Panel de Configuración de Parámetros"
+
+[node name="BtnBack" type="Button" parent="." unique_id=500139959]
+offset_left = 481.0
+offset_top = 192.0
+offset_right = 605.0
+offset_bottom = 223.0
+scale = Vector2(1.32, 1.4090909)
+text = "Volver al Menú"
