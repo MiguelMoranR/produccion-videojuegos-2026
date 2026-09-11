@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5efb1pfc8ef5"]
 
 [ext_resource type="Script" uid="uid://b71mmwfppdpb1" path="res://src/scenes/menu/menu_panel.gd" id="1_3fi7p"]
+[ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="2_o25ln"]
 
 [node name="MenuPanel" type="Control" unique_id=1490884434]
 layout_mode = 3
@@ -29,18 +30,30 @@ scale = Vector2(1.6186523, 1.5192307)
 [node name="BtnSimular" type="Button" parent="VBoxMenu" unique_id=1789957080]
 layout_mode = 2
 text = "Iniciar Simulación"
+script = ExtResource("2_o25ln")
+target_scene = "uid://cdogdo6bwna1a"
+discard_previous = true
 
 [node name="BtnConfig" type="Button" parent="VBoxMenu" unique_id=1753532878]
 layout_mode = 2
 text = "Configuración"
+script = ExtResource("2_o25ln")
+target_scene = "uid://bvh7k2nbjj6sa"
+discard_previous = true
 
 [node name="BtnCredits" type="Button" parent="VBoxMenu" unique_id=1132838420]
 layout_mode = 2
 text = "Créditos"
+script = ExtResource("2_o25ln")
+target_scene = "uid://cvm6127fbmo7o"
+discard_previous = true
 
 [node name="BtnSalir" type="Button" parent="VBoxMenu" unique_id=495710205]
 layout_mode = 2
 text = "Cerrar Aplicación"
+script = ExtResource("2_o25ln")
+target_scene = "uid://5efb1pfc8ef5"
+discard_previous = true
 
 [node name="LblEstado" type="Label" parent="." unique_id=1698408854]
 layout_mode = 0
@@ -51,5 +64,3 @@ scale = Vector2(1.3035429, 1.8482143)
 text = "Estado del Sistema: Listo"
 
 [node name="SceneChanger" type="Node" parent="." unique_id=1798253403]
-
-[connection signal="pressed" from="VBoxMenu/BtnSimular" to="SceneChanger" method="_on_btn_simular_pressed_navigation"]

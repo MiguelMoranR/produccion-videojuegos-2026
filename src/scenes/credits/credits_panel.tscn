@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cvm6127fbmo7o"]
 
-[ext_resource type="Script" uid="uid://cyubg8f2bs01i" path="res://src/scenes/credits/credits_panel.gd" id="1_w2i6q"]
+[ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="2_ib7pc"]
 
 [node name="CreditsPanel" type="Node" unique_id=1423712689]
-script = ExtResource("1_w2i6q")
 
 [node name="Label" type="Label" parent="." unique_id=436173763]
 offset_left = 315.0
@@ -20,3 +19,5 @@ offset_right = 607.0
 offset_bottom = 260.0
 scale = Vector2(1.5454545, 1.4444444)
 text = "Volver al Menú"
+script = ExtResource("2_ib7pc")
+target_scene = "uid://5efb1pfc8ef5"
