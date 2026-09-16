@@ -18,6 +18,8 @@ var current_total: int = 0
 func _ready() -> void:
 	EventBus.base_selected.connect(_on_base_selected)
 	EventBus.item_added.connect(_on_item_added)
+	EventBus.coupon_obtained.connect(_on_coupon_obtained)
+	
 
 func _on_base_selected(base_id: String) -> void:
 	selection["base"] = base_id
@@ -39,4 +41,17 @@ func _update_total() -> void:
 	
 	# 3. Emitir el resultado
 	EventBus.total_changed.emit(current_total)
+
+func _on_coupon_obtained(coupon: Dictionary) -> void:
+	coupons.append(coupon)
+
+	
+# Ejemplo de la información de los cupones
+#{
+	#"value": 2000,
+	#"minimum_purchase": 10000
+#}
+var coupons: Array[Dictionary] = []
+	
+	
 	

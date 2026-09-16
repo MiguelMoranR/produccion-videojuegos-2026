@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3fi7p")
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxMenu" type="VBoxContainer" parent="." unique_id=1828940820]
 layout_mode = 1
@@ -20,19 +21,25 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -132.0
-offset_top = -186.0
-offset_right = 14.0
-offset_bottom = -50.0
+offset_top = -192.0
+offset_right = 25.0
+offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.6186523, 1.5192307)
 
-[node name="BtnSimular" type="Button" parent="VBoxMenu" unique_id=1789957080]
+[node name="BtnBuyPanel" type="Button" parent="VBoxMenu" unique_id=1789957080]
 layout_mode = 2
-text = "Iniciar Simulación"
+text = "Iniciar Compra"
 script = ExtResource("2_o25ln")
 target_scene = "uid://cdogdo6bwna1a"
 discard_previous = true
+
+[node name="BtnCoupons" type="Button" parent="VBoxMenu" unique_id=1465648332]
+layout_mode = 2
+text = "Conseguir Cupones"
+script = ExtResource("2_o25ln")
+target_scene = "uid://dmbr02jxfcdg8"
 
 [node name="BtnConfig" type="Button" parent="VBoxMenu" unique_id=1753532878]
 layout_mode = 2

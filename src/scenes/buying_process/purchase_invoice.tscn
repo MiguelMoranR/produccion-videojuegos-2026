@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://nu7a8bus2l5n"]
+
+[ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="1_8ogr2"]
+
+[node name="PurchaseInvoice" type="Node" unique_id=1293847742]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=881435386]
+offset_right = 483.0
+offset_bottom = 226.0
+
+[node name="LblTitle" type="Label" parent="VBoxContainer" unique_id=1023232655]
+layout_mode = 2
+
+[node name="LblSubtotal" type="Label" parent="VBoxContainer" unique_id=1842050773]
+layout_mode = 2
+
+[node name="LblCoupon" type="Label" parent="VBoxContainer" unique_id=742213182]
+layout_mode = 2
+
+[node name="LblTotal" type="Label" parent="VBoxContainer" unique_id=1168052195]
+layout_mode = 2
+
+[node name="BtnConfirm" type="Button" parent="VBoxContainer" unique_id=249366259]
+layout_mode = 2
+text = "Confirmar compra"
+
+[node name="BtnBack" type="Button" parent="VBoxContainer" unique_id=1585422524]
+layout_mode = 2
+text = "Volver"
+script = ExtResource("1_8ogr2")
+target_scene = "uid://cdogdo6bwna1a"

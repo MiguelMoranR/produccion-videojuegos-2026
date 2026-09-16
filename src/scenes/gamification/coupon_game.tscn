@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://brdp4siylbi2b"]
+
+[ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="1_oxamv"]
+
+[node name="CouponGame" type="Node2D" unique_id=1593269042]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=653932450]
+
+[node name="ButtonNav" type="Button" parent="CanvasLayer" unique_id=1187582109]
+anchors_preset = -1
+anchor_left = 0.92700005
+anchor_top = 0.09900001
+anchor_right = 0.92700005
+anchor_bottom = 0.09900001
+offset_left = -35.904053
+offset_top = -32.152008
+offset_right = 22.095947
+offset_bottom = -1.1520042
+scale = Vector2(1.2491336, 2.074868)
+text = "Cerrar"
+script = ExtResource("1_oxamv")
+target_scene = "uid://dmbr02jxfcdg8"
+discard_previous = true

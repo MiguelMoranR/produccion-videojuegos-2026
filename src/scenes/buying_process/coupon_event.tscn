@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dmbr02jxfcdg8"]
+
+[ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="1_ogcrn"]
+
+[node name="CouponEvent" type="Node" unique_id=993741469]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=259443775]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LblTitle" type="Label" parent="VBoxContainer" unique_id=458951225]
+layout_mode = 2
+text = "Lluvia de cupones"
+
+[node name="LblDesc" type="Label" parent="VBoxContainer" unique_id=515368637]
+layout_mode = 2
+text = "En esta pantalla puede participar en un juego 
+para ganar muchos premios en cupones!"
+
+[node name="BtnPlay" type="Button" parent="VBoxContainer" unique_id=1156514454]
+layout_mode = 2
+text = "Jugar ahora"
+script = ExtResource("1_ogcrn")
+target_scene = "uid://brdp4siylbi2b"
+
+[node name="BtnBack" type="Button" parent="VBoxContainer" unique_id=1571049067]
+layout_mode = 2
+text = "Volver"
+script = ExtResource("1_ogcrn")
+target_scene = "uid://5efb1pfc8ef5"

@@ -11,3 +11,5 @@ signal base_selected(base_name: String)
 signal item_added(item_id: String)
 # Señal para notificar un cambio en el precio total
 signal total_changed(new_total: int)
+# Señal para comunicar que una actividad externa produjo un cupón
+signal coupon_obtained(coupon: Dictionary)

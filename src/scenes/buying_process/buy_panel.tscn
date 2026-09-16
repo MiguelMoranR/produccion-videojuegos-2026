@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cdogdo6bwna1a"]
+
+[ext_resource type="Script" uid="uid://d5ovyl5rctvy" path="res://src/scenes/buying_process/buy_panel.gd" id="1_wtrvc"]
+[ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="2_a5yq5"]
+
+[node name="BuyPanel" type="Control" unique_id=1456396328]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0030864
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_wtrvc")
+metadata/_edit_use_anchors_ = true
+
+[node name="LblStatusLocal" type="Label" parent="." unique_id=1779114356]
+layout_mode = 0
+offset_left = 411.00003
+offset_top = 348.0
+offset_right = 752.0
+offset_bottom = 371.0
+scale = Vector2(1.1508125, 1.8376949)
+text = "Ninguna opción seleccionada de forma local"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=503660392]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=933406136]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 2
+
+[node name="BtnIngrediente1" type="Button" parent="VBoxContainer/GridContainer" unique_id=340620534]
+layout_mode = 2
+text = "+ Seleccionar Base 1"
+
+[node name="BtnIngrediente2" type="Button" parent="VBoxContainer/GridContainer" unique_id=1090235165]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "+ Seleccionar Base 2"
+
+[node name="BtnItem1" type="Button" parent="VBoxContainer/GridContainer" unique_id=1174204115]
+layout_mode = 2
+text = "+ Agregar Item 1"
+
+[node name="BtnItem2" type="Button" parent="VBoxContainer/GridContainer" unique_id=1792896775]
+layout_mode = 2
+text = "+ Agregar Item 2"
+
+[node name="LblTotal" type="Label" parent="VBoxContainer/GridContainer" unique_id=1752981435]
+layout_mode = 2
+text = "Total: $0"
+
+[node name="BtnVolver" type="Button" parent="VBoxContainer" unique_id=948215326]
+layout_mode = 2
+text = "Volver al Menú"
+script = ExtResource("2_a5yq5")
+target_scene = "uid://5efb1pfc8ef5"
+
+[node name="BtnBuy" type="Button" parent="VBoxContainer" unique_id=667455376]
+layout_mode = 2
+text = "Continuar compra"
+script = ExtResource("2_a5yq5")
+target_scene = "uid://nu7a8bus2l5n"
+
+[node name="SceneChanger" type="Node" parent="." unique_id=1309538884]
