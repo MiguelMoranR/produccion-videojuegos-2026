@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d5ovyl5rctvy" path="res://src/scenes/buying_process/buy_panel.gd" id="1_wtrvc"]
 [ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="2_a5yq5"]
+[ext_resource type="Theme" uid="uid://d3ub8xiosggl2" path="res://src/assets/ui/ui_theme.tres" id="3_a5yq5"]
 
 [node name="BuyPanel" type="Control" unique_id=1456396328]
 layout_mode = 3
@@ -64,6 +65,7 @@ target_scene = "uid://5efb1pfc8ef5"
 
 [node name="BtnBuy" type="Button" parent="VBoxContainer" unique_id=667455376]
 layout_mode = 2
+theme = ExtResource("3_a5yq5")
 text = "Continuar compra"
 script = ExtResource("2_a5yq5")
 target_scene = "uid://nu7a8bus2l5n"

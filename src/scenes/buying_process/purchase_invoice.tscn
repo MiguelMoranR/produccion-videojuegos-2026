@@ -29,3 +29,31 @@ layout_mode = 2
 text = "Volver"
 script = ExtResource("1_8ogr2")
 target_scene = "uid://cdogdo6bwna1a"
+
+[node name="PurchaseSuccessPopup" type="Panel" parent="VBoxContainer" unique_id=187378619]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PurchaseSuccessPopup" unique_id=1170446718]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 9.0
+offset_right = 457.0
+offset_bottom = 94.0
+
+[node name="Title" type="Label" parent="VBoxContainer/PurchaseSuccessPopup/VBoxContainer" unique_id=1330192709]
+layout_mode = 2
+text = "¡Compra realizada!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Body" type="Label" parent="VBoxContainer/PurchaseSuccessPopup/VBoxContainer" unique_id=1386829805]
+layout_mode = 2
+text = "Tu pedido está en proceso"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonNav" type="Button" parent="VBoxContainer/PurchaseSuccessPopup/VBoxContainer" unique_id=1743119124]
+layout_mode = 2
+text = "Continuar"
+script = ExtResource("1_8ogr2")
+target_scene = "uid://5efb1pfc8ef5"

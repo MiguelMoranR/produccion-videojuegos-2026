@@ -8,3 +8,7 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	EventBus.navigation_requested.emit(target_scene, discard_previous)
+
+
+func _on_button_nav_pressed() -> void:
+	pass # Replace with function body.

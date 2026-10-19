@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://5efb1pfc8ef5"]
 
 [ext_resource type="Script" uid="uid://b71mmwfppdpb1" path="res://src/scenes/menu/menu_panel.gd" id="1_3fi7p"]
+[ext_resource type="Theme" uid="uid://d3ub8xiosggl2" path="res://src/assets/ui/ui_theme.tres" id="1_fgtyk"]
 [ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="2_o25ln"]
+[ext_resource type="Texture2D" uid="uid://dc26oki75tlcg" path="res://src/scenes/gamification/catch_food/assets/Other/ULTIMA PIZZA.jpeg" id="4_6jtma"]
 
 [node name="MenuPanel" type="Control" unique_id=1490884434]
 layout_mode = 3
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_fgtyk")
 script = ExtResource("1_3fi7p")
 metadata/_edit_use_anchors_ = true
 
@@ -71,3 +74,15 @@ scale = Vector2(1.3035429, 1.8482143)
 text = "Estado del Sistema: Listo"
 
 [node name="SceneChanger" type="Node" parent="." unique_id=1798253403]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1399226676]
+z_index = -1
+layout_mode = 0
+offset_left = 2.0
+offset_top = -182.0
+offset_right = 1155.0
+offset_bottom = 831.0
+mouse_filter = 2
+texture = ExtResource("4_6jtma")
+expand_mode = 1
+stretch_mode = 5

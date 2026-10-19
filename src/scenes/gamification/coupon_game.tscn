@@ -1,8 +1,33 @@
 [gd_scene format=3 uid="uid://brdp4siylbi2b"]
 
 [ext_resource type="Script" uid="uid://ca58bvuyia7ww" path="res://src/components/navigation/button_nav.gd" id="1_oxamv"]
+[ext_resource type="Script" uid="uid://b44s4x4at1jgk" path="res://src/scenes/gamification/spawner.gd" id="1_pcwwn"]
+[ext_resource type="PackedScene" uid="uid://bminl5s25yuwe" path="res://src/scenes/gamification/falling_food.tscn" id="2_04lhb"]
+[ext_resource type="Texture2D" uid="uid://b2n1imwkddu7m" path="res://src/scenes/gamification/catch_food/assets/Aliens/alienGreen_suit.png" id="2_5us3o"]
+[ext_resource type="Script" uid="uid://c4qfv3a3s3im1" path="res://src/scenes/gamification/player.gd" id="3_1u2kp"]
+[ext_resource type="Texture2D" uid="uid://b67nqyesperok" path="res://src/scenes/gamification/catch_food/assets/Stone elements/elementStone016.png" id="3_pcwwn"]
+[ext_resource type="Texture2D" uid="uid://3wov35c66eq7" path="res://src/scenes/gamification/catch_food/assets/Aliens/alienBeige_round.png" id="5_eo802"]
 
-[node name="CouponGame" type="Node2D" unique_id=1593269042]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6313f"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyvdk"]
+size = Vector2(1270.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr7vs"]
+size = Vector2(1283, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5er5f"]
+size = Vector2(781.6455, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08qku"]
+size = Vector2(778.2136, 35.999672)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5rrb"]
+size = Vector2(1280, 29)
+
+[node name="CouponGame" type="Node2D" unique_id=1593269042 groups=["floor", "spawner"]]
+script = ExtResource("1_pcwwn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=653932450]
 
@@ -21,3 +46,120 @@ text = "Cerrar"
 script = ExtResource("1_oxamv")
 target_scene = "uid://dmbr02jxfcdg8"
 discard_previous = true
+
+[node name="Player" type="CharacterBody2D" parent="CanvasLayer" unique_id=1093176775 groups=["floor", "spawner"]]
+script = ExtResource("3_1u2kp")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Player" unique_id=661689583]
+position = Vector2(564, 348)
+scale = Vector2(1.6714287, 1.4428568)
+texture = ExtResource("2_5us3o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Player" unique_id=291341391]
+position = Vector2(567, 536)
+shape = SubResource("RectangleShape2D_6313f")
+
+[node name="AreaRecolect" type="Area2D" parent="CanvasLayer/Player" unique_id=265904447]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Player/AreaRecolect" unique_id=778437502]
+position = Vector2(576, 696)
+shape = SubResource("RectangleShape2D_hyvdk")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Player/AreaRecolect" unique_id=1755062893]
+position = Vector2(562.00006, 270.00003)
+scale = Vector2(2.1142857, 0.47142857)
+texture = ExtResource("5_eo802")
+
+[node name="Objective" type="Label" parent="CanvasLayer" unique_id=438202655]
+anchors_preset = -1
+anchor_right = 0.074
+anchor_bottom = 0.035
+offset_left = 294.0
+offset_top = 23.0
+offset_right = 339.752
+offset_bottom = 23.32
+text = "Ingredientes: 0/0"
+
+[node name="ResultPanel" type="Panel" parent="CanvasLayer" unique_id=1904007488]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ResultLabel" type="Label" parent="CanvasLayer/ResultPanel" unique_id=866911643]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 10.0
+offset_right = 162.0
+offset_bottom = 33.0
+text = "RESULTADOS"
+
+[node name="ButtonNav" type="Button" parent="CanvasLayer/ResultPanel" unique_id=214139601]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 66.0
+offset_right = 221.0
+offset_bottom = 97.0
+text = "Terminar juego"
+script = ExtResource("1_oxamv")
+target_scene = "uid://dmbr02jxfcdg8"
+
+[node name="Spawner2" type="Node2D" parent="." unique_id=1550200116 groups=["floor", "spawner"]]
+position = Vector2(568, 13)
+script = ExtResource("1_pcwwn")
+max_active_items = 3
+collectable_scene = ExtResource("2_04lhb")
+
+[node name="Timer" type="Timer" parent="Spawner2" unique_id=1569376608 groups=["floor", "spawner"]]
+
+[node name="Spawner3" type="Node2D" parent="." unique_id=16584747 groups=["floor", "spawner"]]
+script = ExtResource("1_pcwwn")
+max_active_items = 3
+
+[node name="Timer" type="Timer" parent="Spawner3" unique_id=1453906671 groups=["floor", "spawner"]]
+
+[node name="Spawner4" type="Node2D" parent="." unique_id=1814431415 groups=["floor", "spawner"]]
+script = ExtResource("1_pcwwn")
+max_active_items = 3
+
+[node name="Timer" type="Timer" parent="Spawner4" unique_id=31096301 groups=["floor", "spawner"]]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1492674459]
+position = Vector2(17, 51)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=884869060]
+position = Vector2(563, 131)
+scale = Vector2(0.7090909, 0.6571429)
+texture = ExtResource("3_pcwwn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1827750447]
+position = Vector2(558, 576)
+shape = SubResource("RectangleShape2D_mr7vs")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=264923464]
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls" unique_id=1940925]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=774123407]
+position = Vector2(1038, 308)
+rotation = -1.0687966
+shape = SubResource("RectangleShape2D_5er5f")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=569097501]
+position = Vector2(117.87098, 306.01807)
+rotation = 1.0725986
+shape = SubResource("RectangleShape2D_08qku")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=517278602]
+position = Vector2(2, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1036971570]
+position = Vector2(580, 439)
+scale = Vector2(0.8545455, 0.7499997)
+texture = ExtResource("3_pcwwn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=995724997 groups=["floor", "spawner"]]
+position = Vector2(583, 764)
+shape = SubResource("RectangleShape2D_k5rrb")
+
+[connection signal="collected_food" from="CanvasLayer/Player" to="." method="_on_player_collected_food"]

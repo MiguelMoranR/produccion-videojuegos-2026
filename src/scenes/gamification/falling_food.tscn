@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bminl5s25yuwe"]
+
+[ext_resource type="Texture2D" uid="uid://pb4i0sc5ms4f" path="res://src/scenes/gamification/catch_food/assets/Other/starGold.png" id="1_0wghw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_04lhb"]
+bounce = 0.9
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mr7vs"]
+radius = 32.0
+
+[node name="FallingFood" type="RigidBody2D" unique_id=1310166741 groups=["collectable"]]
+physics_material_override = SubResource("PhysicsMaterial_04lhb")
+contact_monitor = true
+max_contacts_reported = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=96227870]
+texture = ExtResource("1_0wghw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=980854072]
+shape = SubResource("CircleShape2D_mr7vs")
